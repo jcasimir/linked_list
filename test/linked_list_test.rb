@@ -30,6 +30,7 @@ class LinkedListTest < Minitest::Test
     assert_equal "world", list.pop
     assert_equal "hello", list.pop
   end
+
 end
 
 class NodeTest < Minitest::Test
