@@ -57,10 +57,6 @@ class LinkedList < Node
   end
 
   def to_a
-    if link?
-      link.to_a
-    else
-      []
-    end
+    link? ? link.to_a : []
   end
 end
