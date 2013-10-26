@@ -16,16 +16,19 @@ class IterativeLinkedList
   end
 
   def push(data)
-
     if head.nil?
       @head = Node.new(data)
     else
-      target = head
-      while target.link?
-        target = target.link
-      end
-      target.link = Node.new(data)
+      last_node.link = Node.new(data)
     end
+  end
+
+  def last_node
+    current = head
+    while current.link?
+      current = current.link
+    end
+    current
   end
 
   def pop

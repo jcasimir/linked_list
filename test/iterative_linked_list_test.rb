@@ -88,4 +88,11 @@ class IterativeLinkedListTest < Minitest::Test
     list.push("today")
     assert_equal ["hello", "world", "today"], list.to_a
   end
+
+  def test_it_finds_the_last_node
+    list.push("hello")
+    list.push("world")
+    node = list.last_node
+    assert_equal "world", node.data
+  end
 end
