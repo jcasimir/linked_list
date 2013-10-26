@@ -33,16 +33,16 @@ class IterativeLinkedList
 
   def pop
     current = head
-    last = nil
+    previous = nil
     while current.link?
-      last = current
+      previous = current
       current = current.link
     end
 
-    if last.nil?
+    if previous.nil?
       @head = nil
     else
-      last.link = nil
+      previous.link = nil
     end
 
     current.data
