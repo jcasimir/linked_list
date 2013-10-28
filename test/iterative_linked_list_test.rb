@@ -37,6 +37,10 @@ class IterativeLinkedListTest < Minitest::Test
     assert_equal 0, list.count
   end  
 
+  def test_it_pops_nil_when_there_are_no_elements
+    assert_nil list.pop
+  end
+
   def test_it_deletes_a_solo_node
     list.push("hello")
     list.delete("hello")

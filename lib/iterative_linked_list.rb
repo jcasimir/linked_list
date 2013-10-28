@@ -32,20 +32,22 @@ class IterativeLinkedList
   end
 
   def pop
-    current = head
-    previous = nil
-    while current.link?
-      previous = current
-      current = current.link
-    end
+    if head
+      current = head
+      previous = nil
+      while current.link?
+        previous = current
+        current = current.link
+      end
 
-    if previous.nil?
-      @head = nil
-    else
-      previous.link = nil
-    end
+      if previous.nil?
+        @head = nil
+      else
+        previous.link = nil
+      end
 
-    current.data
+      current.data
+    end
   end
 
   def delete(target)

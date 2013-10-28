@@ -20,7 +20,7 @@ class Node
   def pop
     if link && link.link?
       link.pop
-    else
+    elsif link
       output = link.data
       @link = nil
       return output

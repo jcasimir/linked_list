@@ -24,6 +24,10 @@ class LinkedListTest < Minitest::Test
     assert_equal "hello", list.pop
   end
 
+  def test_it_pops_nil_when_there_are_no_elements
+    assert_nil list.pop
+  end
+
   def test_it_converts_to_an_array_with_multiple_elements
     list.push("hello")
     list.push("world")
